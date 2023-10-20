@@ -31,12 +31,10 @@ public class Producer {
             int opcion = Integer.parseInt(System.console().readLine());
             switch (opcion) {
                 case 1:
-                    System.out.println("Hola");
                     sharedData.add(1);
                     out.writeObject(1);
                     break;
                 case 2:
-                    System.out.println("Adios");
                     sharedData.add(2);
                     out.writeObject(2);
                     break;
@@ -62,7 +60,7 @@ public class Producer {
                     break;
             }
             for (Integer integer : sharedData) {
-                System.out.println(integer);
+                System.out.print("<"+integer+">");
             }
         }
     }
