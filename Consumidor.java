@@ -1,62 +1,37 @@
-public class Consumidor implements Runnable {
+import java.io.IOException;
+import java.util.concurrent.BlockingQueue;
 
-    public Consumidor() {
+public class Consumidor implements Runnable {
+    BlockingQueue<Integer> sharedData;
+    public Consumidor(BlockingQueue<Integer> sharedData) {
+        this.sharedData = sharedData;
     }
 
-    public  void abrirTerminal() {
+    public void abrirTerminal() {
         String sistemaOperativo = System.getProperty("os.name").toLowerCase();
-        
+    
         try {
+            ProcessBuilder pb;
             if (sistemaOperativo.contains("nix") || sistemaOperativo.contains("nux") || sistemaOperativo.contains("mac")) {
-                // Comando para abrir una terminal en sistemas Unix/Linux
-                ProcessBuilder pb = new ProcessBuilder("gnome-terminal");
-                pb.start();
+                // Sistema Unix/Linux/Mac
+                pb = new ProcessBuilder("gnome-terminal", "--", "java", "-cp", ".", "Costumer");
             } else if (sistemaOperativo.contains("win")) {
-                // Comando para abrir una terminal en sistemas Windows
-                ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/c", "start cmd.exe");
-                pb.start();
+                // Sistema Windows
+                pb = new ProcessBuilder("cmd.exe", "/c", "start", "cmd", "/k", "java", "-cp", ".", "Costumer");
             } else {
                 System.out.println("Sistema operativo no compatible");
+                return;
             }
-        } catch (Exception e) {
+    
+            pb.start();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    private void init(){
-        System.out.println("Iniciando Consumidor");
-        // haremos un menu de acciones para este consumidor
-        /**
-         * 1. Saludar
-         * 2. Despedirse
-         * 0. Salir (Cierra el hilo)
-         */
-        while (true) {
-            System.out.println("1. Saludar");
-            System.out.println("2. Despedirse");
-            System.out.println("0. Salir");
-            int opcion = Integer.parseInt(System.console().readLine());
-            switch (opcion) {
-                case 1:
-                    System.out.println("Hola");
-                    break;
-                case 2:
-                    System.out.println("Adios");
-                    break;
-                case 0:
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Opcion no valida");
-                    break;
-            }
-        }
-        
-    }
+    
     
     @Override
     public void run() {
         abrirTerminal();
-        init();
     }
 }
