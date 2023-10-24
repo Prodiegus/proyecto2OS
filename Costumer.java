@@ -12,33 +12,41 @@ public class Costumer {
     private ServerSocket serverSocket;
 
     public Costumer(BlockingQueue<Integer> sharedData) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(12345); // Escucha conexiones
-        Socket socket = serverSocket.accept(); // Espera a que el otro proceso se conecte
-        ObjectInputStream in = new ObjectInputStream(socket.getInputStream());
-        this.sharedData = sharedData;
+        this.sharedData = sharedData;  // Asigna sharedData a tu campo de instancia
+        
+        serverSocket = new ServerSocket(12345);  // Asigna serverSocket a tu campo de instancia
+        socket = serverSocket.accept(); // Espera a que el otro proceso se conecte
+        in = new ObjectInputStream(socket.getInputStream());  // Asigna in a tu campo de instancia
     }
+    
 
-    public void run() throws ClassNotFoundException, IOException {
-        System.out.println("Iniciando Consumidor");
+    public boolean run() throws ClassNotFoundException, IOException {
+        System.out.println("Iniciando Caja");
         // haremos un menu de acciones para este consumidor
         /**
          * 1. Saludar
          * 2. Despedirse
          * 0. Salir (Cierra el hilo)
          */
+        int dato = (int) in.readObject();
         while (true) {
             System.out.println("1. Saludar");
             System.out.println("2. Despedirse");
             System.out.println("0. Salir");
-            int opcion = Integer.parseInt(System.console().readLine());
-            switch (opcion) {
+            //int opcion = Integer.parseInt(System.console().readLine());
+            switch (dato) {
                 case 1:
-                    int dato = (int) in.readObject();
-                    if (dato == 1) {
-                        System.out.println("Hola");
+                    dato = (int) in.readObject();
+                    sharedData.add(dato);
+                    for (Integer integer : sharedData) {
+                        if (integer == 1) {
+                            System.out.println("Hola");
+                        }
                     }
                     break;
                 case 2:
+                    dato = (int) in.readObject();
+                    sharedData.add(dato);
                     for (Integer integer : sharedData) {
                         if (integer == 2) {
                             System.out.println("Adios");
@@ -46,21 +54,21 @@ public class Costumer {
                     }
                     break;
                 case 0:
-                String os = System.getProperty("os.name").toLowerCase();
+                    String os = System.getProperty("os.name").toLowerCase();
 
-                try {
-                    socket.close();
-                    serverSocket.close();
-                    if (os.contains("nix") || os.contains("nux") || os.contains("mac")) {
-                        // Para sistemas Unix/Linux/Mac, intenta cerrar la terminal
-                        Runtime.getRuntime().exec("kill -9 $$");
-                    } else if (os.contains("win")) {
-                        // Para sistemas Windows, intenta cerrar la ventana actual
-                        Runtime.getRuntime().exec("taskkill /F /IM cmd.exe");
+                    try {
+                        socket.close();
+                        serverSocket.close();
+                        if (os.contains("nix") || os.contains("nux") || os.contains("mac")) {
+                            // Para sistemas Unix/Linux/Mac, intenta cerrar la terminal
+                            Runtime.getRuntime().exec("kill -9 $$");
+                        } else if (os.contains("win")) {
+                            // Para sistemas Windows, intenta cerrar la ventana actual
+                            Runtime.getRuntime().exec("taskkill /F /IM cmd.exe");
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
                     System.exit(0);
                     break;
                 default:

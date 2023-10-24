@@ -15,8 +15,8 @@ public class Main {
         BlockingQueue<Integer> sharedData = new ArrayBlockingQueue<>(10); // Usamos un BlockingQueue como estructura compartida
 
         while (true) {
-            System.out.println("1. Agregar un consumidor");
-            System.out.println("2. Agregar un productor");
+            System.out.println("1. Agregar un Caja");
+            System.out.println("2. Agregar un Cliente");
             System.out.println("0. Salir");
             int opcion = Integer.parseInt(System.console().readLine());
             switch (opcion) {

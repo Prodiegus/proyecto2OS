@@ -12,12 +12,13 @@ public class Producer {
 
     public Producer(BlockingQueue<Integer> sharedData) throws UnknownHostException, IOException {
         Socket socket = new Socket("localhost", 12345); // Conéctate al proceso que va a recibir datos
-        ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
+        this.out = new ObjectOutputStream(socket.getOutputStream()); // Inicializa this.out
         this.sharedData = sharedData;
     }
+    
 
     public void run() throws IOException {
-        System.out.println("Iniciando Productor");
+        System.out.println("Iniciando Cliente");
         // haremos un menu de acciones para este consumidor
         /**
          * 1. Saludar
@@ -62,6 +63,7 @@ public class Producer {
             for (Integer integer : sharedData) {
                 System.out.print("<"+integer+">");
             }
+            System.out.println();
         }
     }
 

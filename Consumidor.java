@@ -27,6 +27,7 @@ public class Consumidor implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("PID del proceso: " + ProcessHandle.current().pid());  
     }
     
     
