@@ -1,5 +1,6 @@
 package GeneradorTXT;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.util.ArrayList;
 
@@ -26,11 +27,13 @@ public class GestorArchivos {
         // haremos un contador
         int contador = 0;
         // haremos un for para recorrer el arreglo de archivos
-        for (File archivo : archivos) {
-            // haremos un if para saber si el archivo es un txt
-            if (archivo.getName().endsWith(".txt")) {
-                // si es un txt, aumentamos el contador
-                contador++;
+        if(archivos!=null){
+            for (File archivo : archivos) {
+                // haremos un if para saber si el archivo es un txt
+                if (archivo.getName().endsWith(".txt")) {
+                    // si es un txt, aumentamos el contador
+                    contador++;
+                }
             }
         }
         // retornamos el contador
@@ -71,20 +74,25 @@ public class GestorArchivos {
     public void crearArchivo(ArrayList<String> datos){
         // haremos un try catch para crear el archivo
         try {
-            // haremos un objeto de la clase File
+            // crearemos el archivo si este no existe el programa lo creara
             File archivo = new File(ruta+nombre+cantidad+".txt");
-            // haremos un objeto de la clase PrintWriter
-            java.io.PrintWriter escritor = new java.io.PrintWriter(archivo);
+
+            if (!archivo.exists()) {
+                archivo.createNewFile();
+            }
+            java.io.FileWriter escritor = new java.io.FileWriter(archivo);
+            //BufferedWriter be = new BufferedWriter(escritor);
             // haremos un for para recorrer el arreglo de strings
             for (String dato : datos) {
                 // escribimos el dato en el archivo
-                escritor.println(dato);
+                escritor.write(dato);
             }
             // cerramos el escritor
             escritor.close();
-            this.cantidad++;
+            //be.close();
+
         } catch (Exception e) {
-            System.err.println("Error al crear el archivo");
+            System.err.println("Error al crear el archivo: "+e.getMessage()+"-"+e.getLocalizedMessage()+"-"+e.getCause());
         }
     }
 }

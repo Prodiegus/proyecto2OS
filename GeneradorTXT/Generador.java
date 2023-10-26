@@ -22,17 +22,19 @@ public class Generador {
     private ArrayList<String> clientes;
     private ArrayList<String> peliculas;
     private ArrayList<String> semilla;
+    private String rutaSemilla;
 
     public Generador() {
+        this.rutaSemilla = "GeneradorTXT/semilla/peliculas.txt";
         this.atencion = new String[]{"Caja", "Web"};
         this.atencionCliente = "";
         this.pelicula = "";
         this.cliente = "";
-        this.gestorPeliculas = new GestorArchivos("Peliculas/", "peliculas");
-        this.gestorClientes = new GestorArchivos("FlujoClientes/", "clientes");
+        this.gestorPeliculas = new GestorArchivos("GeneradorTXT/Peliculas/", "cartelera");
+        this.gestorClientes = new GestorArchivos("GeneradorTXT/FlujoClientes/", "flujo");
         this.clientes = new ArrayList<>();
         this.peliculas = new ArrayList<>();
-        this.semilla = gestorPeliculas.getArchivo("semilla/peliculas.txt");
+        this.semilla = gestorPeliculas.getArchivo(rutaSemilla);
     }
     
     /**
@@ -42,11 +44,11 @@ public class Generador {
      */
     public void generar(int cantidadPeliculas, int cantidadClientes){
         // haremos un for para generar las peliculas
-        for (int i = 0; i < cantidadPeliculas; i++) {
-            if (cantidadPeliculas > semilla.size()) {
+        if (cantidadPeliculas > semilla.size()) {
                 System.out.println("No hay suficientes peliculas en la semilla");
-                break;
+                cantidadPeliculas = (semilla.size()-1);
             }
+        for (int i = 0; i < cantidadPeliculas; i++) {
             int semillaPelicula = (int) (Math.random() * semilla.size());
             // el anio sera un numero del 2020 al 2050
             anio = (int) (Math.random() * (2050 - 2020 + 1) + 2020);
@@ -89,9 +91,15 @@ public class Generador {
         gestorPeliculas.crearArchivo(peliculas);
         gestorClientes.crearArchivo(clientes);
         // recalculamos la semilla
-        semilla = gestorPeliculas.getArchivo("semilla/peliculas.txt");
+        semilla = gestorPeliculas.getArchivo(rutaSemilla);
         // limpiamos variables
         peliculas.clear();
         clientes.clear();
+    }
+
+    public static void main(String[] args){
+        Generador generador = new Generador();
+        generador.generar(194, 1000);
+        
     }
 }
