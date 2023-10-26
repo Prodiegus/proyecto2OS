@@ -74,8 +74,8 @@ public class Generador {
             dia = (int) (Math.random() * (31 - 1 + 1) + 1);
             // eligira una pelicula dentro del arraylist de peliculas
             pelicula = peliculas.get((int) (Math.random() * peliculas.size())).split("-")[3];
-            // un numero del 40 al 100
-            cantidadTickets = (int) (Math.random() * (100 - 40 + 1) + 40);
+            // un numero del 1 al 5
+            cantidadTickets = (int) (Math.random() * (5 - 1 + 1) + 1);
             // la atencion del cliente viene del arreglo atencion eligira 1 de las 2 opciones con un 70% de probabilidad de eleijir caja y un 30% de elejir web
             if ((int) (Math.random() * (100 - 1 + 1) + 1) <= 70) {
                 this.atencionCliente = atencion[0];
@@ -99,7 +99,7 @@ public class Generador {
 
     public static void main(String[] args){
         Generador generador = new Generador();
-        generador.generar(194, 1000);
+        generador.generar(194, 10000);
         
     }
 }
