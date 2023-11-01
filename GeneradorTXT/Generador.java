@@ -50,8 +50,7 @@ public class Generador {
             }
         for (int i = 0; i < cantidadPeliculas; i++) {
             int semillaPelicula = (int) (Math.random() * semilla.size());
-            // el anio sera un numero del 2020 al 2050
-            anio = (int) (Math.random() * (2050 - 2020 + 1) + 2020);
+            anio = 2024;
             // el mes sera un numero del 1 al 12
             mes = (int) (Math.random() * (12 - 1 + 1) + 1);
             // el dia sera un numero del 1 al 31
