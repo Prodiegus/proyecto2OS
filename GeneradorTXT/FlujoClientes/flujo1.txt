@@ -1,100 +1,100 @@
-2047-5-2-Blade Runner 2049-5-Caja
-2027-8-13-El secreto de sus ojos-1-Web
-2044-2-3-Rocky IV-3-Caja
-2046-5-17-Her-1-Caja
-2027-7-29-Blade Runner 2049-4-Caja
-2034-2-5-El secreto de sus ojos-5-Web
-2020-10-11-El secreto de sus ojos-4-Caja
-2027-11-7-El secreto de sus ojos-1-Caja
-2043-7-19-El secreto de sus ojos-5-Web
-2024-10-10-Her-4-Caja
-2032-11-31-Her-2-Caja
-2020-7-24-Bohemian Rhapsody-4-Caja
-2034-10-7-Blade Runner 2049-3-Caja
-2042-2-5-Marriage Story-3-Web
-2046-8-14-La vida de los otros-3-Caja
-2020-7-25-The Favourite-3-Caja
-2049-5-24-El secreto de sus ojos-2-Web
-2046-5-1-Her-5-Caja
-2035-8-16-Blade Runner 2049-3-Caja
-2021-4-13-Dallas Buyers Club-3-Caja
-2022-5-24-Dallas Buyers Club-1-Caja
-2022-5-15-Rocky IV-2-Web
-2021-3-24-Dallas Buyers Club-1-Caja
-2023-4-5-La vida de los otros-2-Caja
-2049-7-15-Rocky IV-5-Caja
-2049-5-13-Dallas Buyers Club-5-Caja
-2040-1-18-Rocky IV-5-Caja
-2041-3-27-The Favourite-3-Web
-2043-11-24-Dallas Buyers Club-1-Web
-2029-3-16-Bohemian Rhapsody-5-Web
-2022-8-25-Marriage Story-4-Web
-2036-10-11-Marriage Story-5-Web
-2020-4-20-Her-3-Caja
-2043-12-23-Rocky IV-2-Caja
-2023-9-15-The Favourite-2-Web
-2046-6-21-El secreto de sus ojos-5-Caja
-2030-6-7-Marriage Story-2-Web
-2032-9-1-Rocky IV-3-Caja
-2037-1-23-El secreto de sus ojos-2-Web
-2042-1-24-Blade Runner 2049-2-Web
-2020-8-28-La vida de los otros-2-Caja
-2046-8-31-Dallas Buyers Club-5-Caja
-2043-7-5-Her-3-Caja
-2038-12-7-La vida de los otros-3-Caja
-2027-4-28-La vida de los otros-4-Caja
-2034-6-11-La vida de los otros-3-Web
-2041-2-2-Rocky IV-4-Web
-2034-6-12-Blade Runner 2049-2-Caja
-2046-2-30-Marriage Story-4-Caja
-2043-4-27-Dallas Buyers Club-1-Web
-2041-5-19-Her-4-Caja
-2038-7-26-La vida de los otros-5-Caja
-2047-6-24-Blade Runner 2049-3-Web
-2028-2-14-Her-5-Caja
-2026-3-13-Blade Runner 2049-4-Caja
-2028-4-13-Silver Linings Playbook-1-Caja
-2031-10-23-Bohemian Rhapsody-4-Caja
-2039-3-25-The Favourite-3-Web
-2047-1-9-Her-3-Web
-2042-12-20-The Favourite-5-Caja
-2044-7-26-Marriage Story-1-Caja
-2021-3-4-El secreto de sus ojos-5-Web
-2028-3-16-La vida de los otros-3-Caja
-2021-10-19-Bohemian Rhapsody-5-Caja
-2044-6-30-El secreto de sus ojos-3-Caja
-2039-7-14-Her-1-Caja
-2038-6-9-La vida de los otros-2-Caja
-2032-2-3-Marriage Story-1-Caja
-2035-9-2-The Favourite-1-Caja
-2050-2-11-Bohemian Rhapsody-1-Caja
-2042-5-14-Her-4-Web
-2030-2-19-La vida de los otros-2-Web
-2043-12-11-La vida de los otros-1-Web
-2050-4-5-El secreto de sus ojos-2-Caja
-2048-8-24-Bohemian Rhapsody-2-Caja
-2035-9-5-Her-4-Web
-2025-10-1-Marriage Story-2-Caja
-2022-11-12-The Favourite-3-Caja
-2030-12-8-Blade Runner 2049-1-Caja
-2031-9-31-Rocky IV-3-Caja
-2043-5-14-Marriage Story-1-Web
-2041-10-8-El secreto de sus ojos-3-Caja
-2020-3-7-Blade Runner 2049-4-Caja
-2050-6-6-Blade Runner 2049-5-Caja
-2029-1-22-Silver Linings Playbook-5-Web
-2033-1-5-Her-3-Web
-2029-7-11-El secreto de sus ojos-3-Web
-2028-4-17-The Favourite-2-Caja
-2028-8-2-Her-2-Caja
-2025-2-1-Marriage Story-2-Caja
-2033-5-18-Silver Linings Playbook-1-Caja
-2041-6-9-Dallas Buyers Club-3-Caja
-2039-12-12-Her-1-Web
-2022-7-18-Dallas Buyers Club-2-Caja
-2046-7-22-The Favourite-2-Caja
-2041-6-4-La vida de los otros-1-Web
-2031-2-7-The Favourite-4-Caja
-2030-3-13-El secreto de sus ojos-4-Caja
-2022-3-15-El secreto de sus ojos-4-Caja
-2037-2-20-Rocky IV-5-Caja
+2024-3-18-La vida es bella-4-Caja
+2024-2-16-American Sniper-4-Caja
+2024-7-14-The Social Network-4-Caja
+2024-2-12-Blade Runner 2049-4-Caja
+2024-2-16-Llámame por tu nombre-1-Web
+2024-7-22-Up: Una aventura de altura-5-Caja
+2024-1-16-Buscando a Nemo-1-Caja
+2024-3-12-El laberinto del fauno-4-Caja
+2024-2-12-American Sniper-3-Caja
+2024-3-22-La vida es bella-1-Web
+2024-2-18-Rocky V-1-Web
+2024-1-22-Up: Una aventura de altura-1-Web
+2024-2-24-American Sniper-5-Caja
+2024-5-20-El bueno, el feo y el malo-1-Web
+2024-1-12-El gran truco-1-Caja
+2024-5-24-The Martian-5-Web
+2024-1-12-Up: Una aventura de altura-3-Caja
+2024-3-20-The Social Network-2-Caja
+2024-5-22-Selma-1-Caja
+2024-7-26-Un lugar en silencio-3-Caja
+2024-2-20-Un lugar en silencio-1-Web
+2024-2-26-Vice-4-Web
+2024-7-24-Soul-4-Caja
+2024-3-18-El discurso del rey-1-Caja
+2024-1-12-Three Billboards Outside Ebbing, Missouri-1-Caja
+2024-3-16-The Social Network-5-Web
+2024-5-14-Un lugar en silencio-2-Web
+2024-7-14-El club de la lucha-5-Caja
+2024-1-12-Vice-5-Caja
+2024-2-20-Blade Runner 2049-4-Caja
+2024-5-16-El gran truco-5-Caja
+2024-1-28-Whiplash-1-Caja
+2024-3-24-Selma-2-Caja
+2024-2-14-Casablanca-1-Caja
+2024-5-26-Whiplash-3-Caja
+2024-7-26-Memento-3-Caja
+2024-1-26-Three Billboards Outside Ebbing, Missouri-3-Caja
+2024-7-26-Casablanca-1-Caja
+2024-7-24-Matrix-1-Caja
+2024-7-28-Rocky V-4-Web
+2024-1-18-Once Upon a Time in Hollywood-2-Caja
+2024-7-10-American Sniper-2-Caja
+2024-3-26-Soul-4-Web
+2024-2-26-Rocky V-4-Caja
+2024-7-26-Midnight in Paris-3-Caja
+2024-2-24-Los siete samuráis-3-Caja
+2024-3-12-Buscando a Nemo-2-Caja
+2024-1-18-El laberinto del fauno-4-Caja
+2024-2-18-The Social Network-2-Caja
+2024-5-28-Buscando a Nemo-2-Web
+2024-1-16-American Sniper-3-Caja
+2024-5-22-La vida es bella-5-Caja
+2024-3-16-Moonlight-2-Web
+2024-3-28-Llámame por tu nombre-3-Caja
+2024-7-10-El sexto sentido-4-Caja
+2024-1-26-Buscando a Nemo-5-Caja
+2024-7-14-El bueno, el feo y el malo-5-Caja
+2024-5-24-Moonlight-2-Caja
+2024-5-20-Vice-2-Web
+2024-5-14-Up: Una aventura de altura-5-Web
+2024-2-24-Moonlight-5-Caja
+2024-2-12-Buscando a Nemo-3-Caja
+2024-3-28-El gran truco-1-Caja
+2024-7-26-Llámame por tu nombre-4-Web
+2024-7-14-Blade Runner 2049-2-Caja
+2024-3-14-The Martian-4-Caja
+2024-7-12-Un lugar en silencio-2-Caja
+2024-2-16-Ford v Ferrari-1-Web
+2024-2-24-Once Upon a Time in Hollywood-5-Web
+2024-7-24-El club de la lucha-4-Caja
+2024-2-14-Los siete samuráis-4-Web
+2024-2-20-The Social Network-3-Caja
+2024-7-16-Ford v Ferrari-4-Caja
+2024-7-20-La vida es bella-5-Caja
+2024-5-22-El bueno, el feo y el malo-3-Caja
+2024-3-28-Memento-5-Caja
+2024-7-14-Llámame por tu nombre-5-Caja
+2024-1-18-Blade Runner 2049-4-Caja
+2024-7-18-American Sniper-4-Caja
+2024-7-16-Once Upon a Time in Hollywood-5-Web
+2024-2-26-Casablanca-2-Web
+2024-3-16-Moonlight-5-Caja
+2024-3-18-El discurso del rey-3-Caja
+2024-1-14-American Sniper-5-Caja
+2024-2-20-Selma-3-Caja
+2024-1-22-Vice-1-Web
+2024-7-14-Casablanca-2-Caja
+2024-3-22-Llámame por tu nombre-3-Web
+2024-5-20-Los siete samuráis-3-Web
+2024-1-14-Selma-3-Web
+2024-5-26-El club de la lucha-2-Caja
+2024-3-26-Midnight in Paris-3-Web
+2024-5-24-Llámame por tu nombre-4-Web
+2024-2-22-Whiplash-3-Caja
+2024-2-20-Whiplash-2-Caja
+2024-1-24-Moonlight-2-Web
+2024-2-22-El laberinto del fauno-2-Caja
+2024-1-24-El bueno, el feo y el malo-2-Caja
+2024-5-24-El sexto sentido-1-Caja
+2024-3-26-Once Upon a Time in Hollywood-1-Caja

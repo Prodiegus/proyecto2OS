@@ -1,6 +1,5 @@
 package GeneradorTXT;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.util.ArrayList;
 

@@ -43,6 +43,7 @@ public class Generador {
      * @param cantidadClientes
      */
     public void generar(int cantidadPeliculas, int cantidadClientes){
+        int primos[] = {1, 2, 3, 5, 7, 11};
         // haremos un for para generar las peliculas
         if (cantidadPeliculas > semilla.size()) {
                 System.out.println("No hay suficientes peliculas en la semilla");
@@ -51,10 +52,13 @@ public class Generador {
         for (int i = 0; i < cantidadPeliculas; i++) {
             int semillaPelicula = (int) (Math.random() * semilla.size());
             anio = 2024;
-            // el mes sera un numero del 1 al 12
-            mes = (int) (Math.random() * (12 - 1 + 1) + 1);
-            // el dia sera un numero del 1 al 31
-            dia = (int) (Math.random() * (31 - 1 + 1) + 1);
+            // el mes sera un primo entre el 1 y el 12
+            mes = primos[(int) (Math.random() * (primos.length - 1))];
+            // el dia sera un numero par del 10 al 28
+            dia = (int) (Math.random() * (18 - 1 + 1) + 10);
+            if (dia % 2 != 0) {
+                dia++;
+            }
             // un numero del 40 al 100
             cantidadTickets = (int) (Math.random() * (100 - 40 + 1) + 40);
             pelicula += anio + "-" + mes + "-" + dia + "-" + semilla.get(semillaPelicula) + "-" + cantidadTickets + "\n";
@@ -66,11 +70,14 @@ public class Generador {
         // haremos un for para generar los clientes
         for (int i = 0; i < cantidadClientes; i++) {
             // el anio sera un numero del 2020 al 2050
-            anio = (int) (Math.random() * (2050 - 2020 + 1) + 2020);
-            // el mes sera un numero del 1 al 12
-            mes = (int) (Math.random() * (12 - 1 + 1) + 1);
-            // el dia sera un numero del 1 al 31
-            dia = (int) (Math.random() * (31 - 1 + 1) + 1);
+            anio = 2024;
+            // el mes sera un primo entre el 1 y el 12
+            mes = primos[(int) (Math.random() * (primos.length - 1))];
+            // el dia sera un numero par del 10 al 28
+            dia = (int) (Math.random() * (18 - 1 + 1) + 10);
+            if (dia % 2 != 0) {
+                dia++;
+            }
             // eligira una pelicula dentro del arraylist de peliculas
             pelicula = peliculas.get((int) (Math.random() * peliculas.size())).split("-")[3];
             // un numero del 1 al 5

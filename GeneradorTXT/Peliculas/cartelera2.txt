@@ -1,50 +1,194 @@
-2049-12-13-Un lugar en silencio-83
-2021-4-10-Rambo III-46
-2036-11-21-Rambo: Primera sangre-61
-2047-12-30-Rocky V-52
-2036-2-30-Rocky II-77
-2036-11-16-Rocky Balboa-93
-2022-8-3-Nomadland-72
-2045-8-27-The Shape of Water-98
-2035-1-23-El secreto de sus ojos-49
-2030-9-22-Ford v Ferrari-49
-2047-9-14-Lion-63
-2034-6-17-Piratas del Caribe: La maldición de la Perla Negra-66
-2050-1-20-Vice-41
-2037-11-28-Boyhood-79
-2039-12-5-Los juegos del hambre-42
-2027-7-2-Little Women-76
-2034-5-25-Guasón-98
-2041-1-27-Historia de un matrimonio-73
-2029-1-18-Tres anuncios por un crimen-97
-2044-8-9-The Social Network-81
-2050-4-6-Bohemian Rhapsody: La historia de Freddie Mercury-46
-2028-6-28-El origen-97
-2024-8-27-Rambo: Regreso al infierno-79
-2031-10-13-Gravity-89
-2045-2-8-The Tree of Life-44
-2050-1-21-Avatar-82
-2037-1-24-Rocky III-96
-2049-2-31-Mad Max: Furia en la carretera-89
-2045-7-12-Hugo-64
-2038-1-2-El juicio de los 7 de Chicago-92
-2040-8-5-Coco-58
-2041-4-28-Harry Potter y la piedra filosofal-54
-2031-4-29-Arrival-73
-2033-8-11-Érase una vez en… Hollywood-94
-2023-12-15-Hell or High Water-41
-2050-8-11-Transformers: El lado oscuro de la luna-86
-2029-4-20-Alien, el octavo pasajero-95
-2032-4-20-The Favourite-42
-2047-9-29-Rocky-54
-2045-3-23-Black Panther-87
-2034-6-5-El irlandés-73
-2047-12-10-Django Unchained-66
-2045-8-11-Fences-62
-2043-12-15-Parasite-100
-2049-9-25-El Padrino-40
-2044-5-12-127 Hours-49
-2032-6-16-El club de la lucha-43
-2036-1-4-E.T., el extraterrestre-51
-2031-9-8-Hacksaw Ridge-97
-2032-3-9-La La Land-93
+2024-3-14-El bueno, el feo y el malo-61
+2024-1-12-La vida de los otros-51
+2024-3-18-La favorita-77
+2024-1-12-El exorcista-67
+2024-1-26-Black Swan-41
+2024-1-16-The Help-88
+2024-7-14-Inception-58
+2024-2-18-Buscando a Nemo-71
+2024-3-10-Call Me by Your Name-76
+2024-2-22-Coco-82
+2024-1-12-Titanic-77
+2024-1-22-Rocky-79
+2024-7-12-The Favourite-65
+2024-5-22-Toy Story-72
+2024-5-16-Dallas Buyers Club-66
+2024-5-28-El discurso del rey-70
+2024-1-26-Pulp Fiction-88
+2024-5-24-The Artist-86
+2024-2-14-The Fighter-42
+2024-7-24-The Martian-83
+2024-2-20-Argo-86
+2024-7-26-La forma del agua-94
+2024-1-14-No Time to Die-82
+2024-2-16-Beasts of the Southern Wild-49
+2024-7-16-El señor de los anillos: el retorno del rey-71
+2024-7-14-El origen-87
+2024-1-26-True Grit-42
+2024-7-26-Wall~E-46
+2024-3-24-Interstellar-98
+2024-1-12-2001: Una odisea del espacio-99
+2024-2-10-Origen-98
+2024-3-24-Birdman o (La inesperada virtud de la ignorancia)-46
+2024-1-20-Gravity-40
+2024-7-22-Fences-44
+2024-3-14-Bohemian Rhapsody: La historia de Freddie Mercury-58
+2024-5-10-Get Out-84
+2024-1-26-Captain Phillips-96
+2024-3-20-La lista de Schindler-46
+2024-5-26-La red social-50
+2024-1-12-Mad Max: Fury Road-99
+2024-7-14-Lady Bird-66
+2024-3-20-Gladiador-97
+2024-2-14-The Imitation Game-90
+2024-3-20-¡Huye!-75
+2024-3-22-Creed II: Defendiendo el legado-94
+2024-1-20-Zero Dark Thirty-91
+2024-1-12-El juicio de los 7 de Chicago-59
+2024-1-16-La vida es bella-40
+2024-5-22-Infiltrado en el KKKlan-55
+2024-5-20-Whiplash: Música y obsesión-90
+2024-2-16-Her-91
+2024-2-20-The Big Short-64
+2024-1-24-Contra lo imposible-41
+2024-1-22-Blade Runner 2049-61
+2024-3-26-Forrest Gump-72
+2024-5-12-The Kids Are All Right-42
+2024-3-16-El sexto sentido-99
+2024-5-20-A Star Is Born-88
+2024-2-14-Creed: Corazón de campeón-51
+2024-7-12-American Sniper-92
+2024-3-18-Cadena perpetua-46
+2024-7-26-Matrix-44
+2024-7-24-Manchester by the Sea-64
+2024-1-24-Roma-74
+2024-7-22-Psicosis-41
+2024-1-18-Rocky III-56
+2024-3-26-Avatar-79
+2024-5-12-Pantera Negra-82
+2024-3-18-Un lugar en silencio-85
+2024-2-12-Room-65
+2024-3-18-Amour-80
+2024-5-14-Hugo-55
+2024-1-20-The Irishman-99
+2024-3-28-Hacksaw Ridge-40
+2024-3-18-Moonlight-93
+2024-7-18-Hidden Figures-61
+2024-7-28-El gran Gatsby-77
+2024-1-16-Up: Una aventura de altura-99
+2024-3-16-Los juegos del hambre: Sinsajo ~ Parte 1-45
+2024-3-20-Bohemian Rhapsody-69
+2024-5-20-Mad Max: Furia en la carretera-98
+2024-2-22-Toy Story 3-57
+2024-1-26-Slumdog Millionaire-55
+2024-3-24-Selma-82
+2024-1-12-Casablanca-40
+2024-1-12-Hell or High Water-93
+2024-2-24-Green Book: Una amistad sin fronteras-72
+2024-7-16-Arrival-62
+2024-3-20-Los siete samuráis-65
+2024-3-16-Rambo III-64
+2024-5-24-American Hustle-55
+2024-7-28-Mad Max: Furia en el camino-44
+2024-2-22-El silencio de los corderos-82
+2024-5-16-War Horse-56
+2024-1-12-BlacKkKlansman-63
+2024-3-26-The Revenant-90
+2024-7-24-The Tree of Life-98
+2024-1-22-El gran truco-62
+2024-3-14-Harry Potter y la piedra filosofal-91
+2024-5-14-The Wolf of Wall Street-76
+2024-3-18-Rocky Balboa-97
+2024-7-20-Philomena-56
+2024-5-10-E.T., el extraterrestre-51
+2024-5-12-12 años de esclavitud-43
+2024-1-20-Rocky V-75
+2024-3-12-Rambo: Last Blood-96
+2024-2-26-Joker-59
+2024-3-18-El irlandés-81
+2024-1-26-Transformers: El lado oscuro de la luna-92
+2024-5-28-1917-40
+2024-2-16-El lobo de Wall Street-68
+2024-3-24-La llegada-47
+2024-7-14-Django sin cadenas-49
+2024-7-20-Jurassic Park-83
+2024-1-26-127 Hours-53
+2024-1-14-Érase una vez en… Hollywood-89
+2024-2-18-Salvar al soldado Ryan-97
+2024-1-16-Dunkerque-40
+2024-1-26-Rambo: Primera sangre, parte II-93
+2024-1-24-El caballero oscuro-96
+2024-1-18-Alien, el octavo pasajero-40
+2024-2-22-La La Land-84
+2024-3-26-La naranja mecánica-81
+2024-2-20-12 Years a Slave-74
+2024-5-24-Rocky II-94
+2024-3-12-Soul-86
+2024-5-20-Llámame por tu nombre-76
+2024-7-26-Vice: Más allá del poder-59
+2024-5-16-Bridge of Spies-99
+2024-3-14-El club de la lucha-49
+2024-2-22-Memento-91
+2024-3-20-Regreso al futuro-96
+2024-5-22-The Social Network-83
+2024-2-20-Jojo Rabbit-71
+2024-1-26-El laberinto del fauno-98
+2024-5-28-Spotlight-71
+2024-7-16-Lion-72
+2024-5-24-Lincoln-50
+2024-7-24-Three Billboards Outside Ebbing, Missouri-81
+2024-7-10-Blade Runner-88
+2024-7-28-Silver Linings Playbook-97
+2024-1-10-Rambo: Primera sangre-71
+2024-7-22-Transformers-58
+2024-3-24-Black Panther-88
+2024-3-26-Star Wars: Episodio IV ~ Una nueva esperanza-52
+2024-5-22-Mujercitas-58
+2024-3-22-Parásitos-95
+2024-1-22-Ciudadano Kane-86
+2024-5-18-Rocky IV-57
+2024-5-12-Midnight in Paris-50
+2024-7-26-Green Book-44
+2024-2-20-Los juegos del hambre-62
+2024-1-28-Brooklyn-59
+2024-3-16-Nace una estrella-91
+2024-1-22-Historia de un matrimonio-61
+2024-5-28-Terminator 2: El juicio final-51
+2024-2-24-Transformers: La venganza de los caídos-65
+2024-7-14-The Trial of the Chicago 7-87
+2024-2-26-Marriage Story-57
+2024-3-16-Tres anuncios por un crimen-72
+2024-1-24-The Shape of Water-96
+2024-5-16-Boyhood-72
+2024-5-20-Vice-59
+2024-2-16-Rambo: Regreso al infierno-65
+2024-3-22-Moneyball-42
+2024-5-22-The Grand Budapest Hotel-61
+2024-2-24-El resplandor-43
+2024-5-16-El rey león-44
+2024-1-18-El señor de los anillos: La comunidad del anillo-97
+2024-7-18-Piratas del Caribe: La maldición de la Perla Negra-77
+2024-2-14-Les Misérables-68
+2024-3-10-Amélie-62
+2024-5-16-Whiplash-50
+2024-2-12-Guasón-78
+2024-2-28-Los juegos del hambre: En llamas-72
+2024-2-14-Nebraska-98
+2024-5-24-Little Women-79
+2024-3-18-Birdman or (The Unexpected Virtue of Ignorance)-100
+2024-7-24-Life of Pi-84
+2024-5-26-El Padrino-57
+2024-3-14-Django desencadenado-87
+2024-5-26-Indiana Jones: En busca del arca perdida-71
+2024-7-18-The Descendants-40
+2024-1-26-The Theory of Everything-54
+2024-5-14-Parasite-60
+2024-1-10-Dune (2021)-83
+2024-1-20-Django Unchained-76
+2024-1-26-Nomadland-86
+2024-2-26-Ford v Ferrari-68
+2024-5-26-Once Upon a Time in Hollywood-79
+2024-1-22-Extremely Loud & Incredibly Close-57
+2024-7-22-El viaje de Chihiro-48
+2024-1-10-El secreto de sus ojos-56
+2024-7-24-Los juegos del hambre: Sinsajo ~ Parte 2-80

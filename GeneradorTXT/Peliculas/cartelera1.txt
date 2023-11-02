@@ -1,10 +1,30 @@
-2038-5-24-Silver Linings Playbook-84
-2037-2-8-El secreto de sus ojos-88
-2025-10-15-Blade Runner 2049-42
-2038-1-14-Bohemian Rhapsody-74
-2025-9-16-Marriage Story-100
-2049-11-18-Dallas Buyers Club-95
-2031-3-31-Rocky IV-62
-2036-7-12-Her-53
-2036-2-22-The Favourite-58
-2040-2-16-La vida de los otros-75
+2024-5-26-Up: Una aventura de altura-49
+2024-2-26-El club de la lucha-45
+2024-3-18-Ford v Ferrari-66
+2024-5-18-La vida es bella-59
+2024-1-26-Whiplash-41
+2024-5-14-Three Billboards Outside Ebbing, Missouri-63
+2024-3-20-El laberinto del fauno-64
+2024-2-18-Memento-44
+2024-2-16-Moonlight-66
+2024-1-18-El bueno, el feo y el malo-100
+2024-7-14-Casablanca-84
+2024-2-20-Los siete samuráis-81
+2024-2-14-Un lugar en silencio-83
+2024-7-20-Buscando a Nemo-100
+2024-7-20-American Sniper-75
+2024-5-20-The Big Short-60
+2024-5-22-Once Upon a Time in Hollywood-62
+2024-7-18-Soul-43
+2024-2-16-Midnight in Paris-91
+2024-5-16-Vice-88
+2024-1-12-Matrix-47
+2024-7-18-The Social Network-92
+2024-5-16-El gran truco-42
+2024-2-10-Blade Runner 2049-87
+2024-3-10-The Martian-91
+2024-5-28-El sexto sentido-79
+2024-2-12-Selma-73
+2024-5-16-Llámame por tu nombre-94
+2024-2-22-El discurso del rey-51
+2024-7-14-Rocky V-76
