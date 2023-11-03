@@ -28,7 +28,6 @@ public class CineVictoria {
             if (cliente[5].equals("Web")) {
                 try {
                     detalle = switchCine.vlanWeb(cliente);
-                    //System.out.println(detalle);
                     gestorSalidas.addDetalle(fecha, detalle);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -36,7 +35,6 @@ public class CineVictoria {
             } else if (cliente[5].equals("Caja")) {
                 try {
                     detalle = switchCine.vlanCaja(cliente);
-                    //System.out.println(detalle);
                     gestorSalidas.addDetalle(fecha, detalle);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

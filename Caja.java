@@ -37,7 +37,6 @@ public class Caja implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("hilo caja "+id);
         for(int i = 0; i < cartelera.size(); i++){
             if (cliente[3].equals(cartelera.get(i)[3])) {
                 if(Integer.parseInt(cartelera.get(i)[4]) > Integer.parseInt(cliente[4])){

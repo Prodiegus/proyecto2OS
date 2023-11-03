@@ -80,12 +80,14 @@ public class Switch {
             caja2.setCliente(cliente);
             Thread hiloCaja2 = new Thread(caja2); // Crea un nuevo hilo para cada cliente
             hiloCaja2.start();
+            hiloCaja2.join();
             detalle = caja2.getDetalle();
         } else {
             Caja caja1 = serviciosCaja.get(0); // Crea una nueva instancia de Caja para cada cliente
             caja1.setCliente(cliente);
             Thread hiloCaja1 = new Thread(caja1); // Crea un nuevo hilo para cada cliente
             hiloCaja1.start();
+            hiloCaja1.join();
             detalle = caja1.getDetalle();
         }
         return detalle;
@@ -111,6 +113,7 @@ public class Switch {
                 web.setCliente(cliente);
                 Thread hiloWeb = new Thread(web);
                 hiloWeb.start();
+                hiloWeb.join();
                 detalle = web.getDetalle();
             }
             

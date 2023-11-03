@@ -52,16 +52,15 @@ public class Web implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("hilo web " + id);
         for (int i = 0; i < cartelera.size(); i++) {
             //System.out.println("web "+id+" "+cliente[3]+" == "+cartelera.get(i)[3]);
             if (cliente[3].trim().equals(cartelera.get(i)[3].trim())) {
                 //System.out.println("web "+id+" "+cliente[3]+" == "+cartelera.get(i)[3]);
                 if (Integer.parseInt(cartelera.get(i)[4]) > Integer.parseInt(cliente[4])*0.8) {
                     cartelera.get(i)[4] = String.valueOf(Integer.parseInt(cartelera.get(i)[4]) - Integer.parseInt(cliente[4]));
-                    this.detalle = "Hilo Web "+this.id+" compra "+cliente[4]+" tickets de "+cliente[3]+" - Quedan "+cartelera.get(i)[4]+" tickets";
+                    this.detalle = "Hilo Web "+this.id+" compra "+cliente[4]+" tickets de "+cliente[3];
                 }else{
-                    this.detalle = "Hilo Web "+this.id+" intenta comprar "+cliente[4]+" tickets de "+cliente[3]+" - No quedan disponibles (sobrepasa el 80%)"+ " - Quedan "+cartelera.get(i)[4]+" tickets";
+                    this.detalle = "Hilo Web "+this.id+" intenta comprar "+cliente[4]+" tickets de "+cliente[3]+" - No quedan disponibles (sobrepasa el 80%)";
                 }
             }
         }
