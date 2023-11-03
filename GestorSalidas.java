@@ -69,13 +69,14 @@ public class GestorSalidas {
                 }
             }
         }
+        System.out.println("Archivos de salida creados");
     }
 
     /**
      * Esta funcion sera utilizada para agregar una linea de detalle al txt de la fecha
      * Correspondiente
      */
-    public void addDetalle(String fecha){
+    public void addDetalle(String fecha, String detalle){
         // haremos un objeto de la clase File
         File archivo = new File(ruta+nombreCarpeta+"/"+fecha+".txt");
         // haremos un try catch para escribir en el archivo
@@ -85,7 +86,7 @@ public class GestorSalidas {
             // haremos un objeto de la clase PrintWriter
             java.io.PrintWriter pw = new java.io.PrintWriter(escritor);
             // escribiremos en el archivo
-            pw.println("Detalle");
+            pw.println(detalle);
             // cerraremos el escritor
             escritor.close();
         } catch (Exception e) {

@@ -50,6 +50,7 @@ public class Main {
             cineVictoria.run();
         }catch(Exception e){
             System.err.println("Error : "+e.getMessage());
+            e.printStackTrace();
         } 
     }
 

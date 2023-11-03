@@ -1,6 +1,5 @@
 import java.util.ArrayList;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.Semaphore;
 
 public class Switch {
 
@@ -10,14 +9,8 @@ public class Switch {
     private ArrayList<Web> serviciosWeb;
     private ArrayList<Thread> hilosCaja;
     private ArrayList<Thread> hilosWeb;
-    private ArrayList<String> estrenos;
-    private Lock mutexCaja = new ReentrantLock();
-    private Lock mutexCaja2 = new ReentrantLock();
-    private Lock mutexWeb = new ReentrantLock();
-    private Lock mutexWeb2 = new ReentrantLock();
-    private Lock mutexWeb3 = new ReentrantLock();
-    private Lock mutexWeb4 = new ReentrantLock();
-    private Lock mutexWeb5 = new ReentrantLock();
+    private ArrayList<String[]> estrenos;
+    private Semaphore webSemaphore = new Semaphore(5);
 
     public Switch(ArrayList<String[]> cartelera) {
         this.cajas = 2;
@@ -30,13 +23,18 @@ public class Switch {
         creaHilos(cartelera);
     }
 
-    private ArrayList<String> getEstrenos(ArrayList<String[]> cartelera){
-        ArrayList<String> estrenos = new ArrayList<>();
+    private ArrayList<String[]> getEstrenos(ArrayList<String[]> cartelera){
+        ArrayList<String[]> estrenos = new ArrayList<>();
+        String[] estreno = {"", ""};
         String fecha = "";
         for (String[] pelicula : cartelera) {
             fecha = pelicula[0]+"-"+pelicula[1]+"-"+pelicula[2];
-            if (!estrenos.contains(fecha)) {
-                estrenos.add(fecha);
+            estreno[0] = fecha;
+            estreno[1] = pelicula[3];
+            if (!estrenos.contains(estreno)) {
+                estreno[0] = fecha;
+                estreno[1] = pelicula[3];
+                estrenos.add(estreno);
             }
         }
         return estrenos;
@@ -62,51 +60,85 @@ public class Switch {
         }
     }
 
-    public String vlanCaja(String[] cliente) throws InterruptedException{
-        String detalle = "";
-        String fecha = cliente[0]+"-"+cliente[1]+"-"+cliente[2];
-        System.out.println("vlanCaja: "+cliente[3]);
-        if (estrenos.contains(fecha)) {
-            detalle += "Estreno caja 2";
-            //mutexCaja2.lock();
-            try{
-               // hilosCaja.get(1).interrupt();   
+    public String vlanCaja(String[] cliente) throws InterruptedException {
+        String detalle = null; // Inicializa como null
+        String fecha = cliente[0] + "-" + cliente[1] + "-" + cliente[2];
+        String pelicula = cliente[3];
+        String[] atencion = {fecha, pelicula};
+        //System.out.println("vlanCaja: " + cliente[3]);
+        boolean estreno = false;
+        for (String[] estrenoCaja : estrenos) {
+            if (estrenoCaja[0].equals(atencion[0]) && estrenoCaja[1].equals(atencion[1])) {
+                estreno = true;
             }
-            finally {
-                //mutexCaja2.unlock();
-                //hilosCaja.get(1).resume();
-                //hilosCaja.get(1).wait();
-            }
+        }
+        if (estreno) {
+            Caja caja2 = serviciosCaja.get(1);// Crea una nueva instancia de Caja para cada cliente
+            caja2.setCliente(cliente);
+            Thread hiloCaja2 = new Thread(caja2); // Crea un nuevo hilo para cada cliente
+            hiloCaja2.start();
+            hiloCaja2.join();
+            detalle = caja2.getDetalle();
         } else {
-            detalle += "Normal caja 1";
-            //mutexCaja.lock();
-            try{
-                //hilosCaja.get(0).interrupt();;
-                //hilosCaja.get(0).suspend();
-            }
-            finally {
-                //hilosCaja.get(0).resume();
-                //mutexCaja.unlock();
-                //hilosCaja.get(0).wait();
-            }
+            Caja caja1 = serviciosCaja.get(0); // Crea una nueva instancia de Caja para cada cliente
+            caja1.setCliente(cliente);
+            Thread hiloCaja1 = new Thread(caja1); // Crea un nuevo hilo para cada cliente
+            hiloCaja1.start();
+            hiloCaja1.join();
+            detalle = caja1.getDetalle();
         }
-        //System.out.println("vlanCaja: "+cliente[3]);
         return detalle;
-    } 
+    }    
 
-    public String vlanWeb(String[] cliente) throws InterruptedException{
-        System.out.println("vlanWeb: "+cliente[3]);
+    public String vlanWeb(String[] cliente) throws InterruptedException {
+       // System.out.println("vlanWeb: " + cliente[3]);
         String detalle = "";
-        mutexWeb.lock();
+        webSemaphore.acquire();
+        Web web = getWebDisponible();
+        while (web == null) {
+            //System.out.println("No hay conexion web disponible");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+            web = getWebDisponible();
+        }
         try{
-            hilosWeb.get(0).start();
-
+            if(web!=null){
+                web.setCliente(cliente);
+                Thread hiloWeb = new Thread(web);
+                hiloWeb.start();
+                //hiloWeb.join();
+                detalle = web.getDetalle();
+            }
+            
+        }finally{
+            regresarWeb(web);
+            webSemaphore.release();
         }
-        finally {
-            mutexWeb.unlock();
-        }
-        
-        //System.out.println("vlanWeb: "+cliente[3]);
+    
         return detalle;
     }
+
+    private Web getWebDisponible(){
+        synchronized(serviciosWeb){
+            for(Web web : serviciosWeb){
+                if(!web.estaOcupado()){
+                    web.despertar();
+                    return web;
+                }
+            }
+        }
+        return null;
+    }
+
+    private void regresarWeb(Web web){
+        synchronized(serviciosWeb){
+            web.ponerADormir();
+            serviciosWeb.add(web);   
+        }
+    }
+    
+    
 }
