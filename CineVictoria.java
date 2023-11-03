@@ -14,7 +14,7 @@ public class CineVictoria {
 
     public void run(){
         getDias();
-        //GestorSalidas gestorSalidas = new GestorSalidas(fechas);
+        GestorSalidas gestorSalidas = new GestorSalidas(fechas);
         String detalle = "";
         String fecha = "";
         System.out.println("Bienvenido a Cine Victoria");
@@ -29,7 +29,7 @@ public class CineVictoria {
                 try {
                     detalle = switchCine.vlanWeb(cliente);
                     //System.out.println(detalle);
-                    //gestorSalidas.addDetalle(fecha, detalle);
+                    gestorSalidas.addDetalle(fecha, detalle);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -37,7 +37,7 @@ public class CineVictoria {
                 try {
                     detalle = switchCine.vlanCaja(cliente);
                     //System.out.println(detalle);
-                    //gestorSalidas.addDetalle(fecha, detalle);
+                    gestorSalidas.addDetalle(fecha, detalle);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -21,21 +21,20 @@ public class Switch {
         this.hilosWeb = new ArrayList<Thread>();
         this.estrenos = getEstrenos(cartelera);
         creaHilos(cartelera);
+        //printHilos();
     }
 
     private ArrayList<String[]> getEstrenos(ArrayList<String[]> cartelera){
         ArrayList<String[]> estrenos = new ArrayList<>();
-        String[] estreno = {"", ""};
+        String[] estreno = new String[2];
         String fecha = "";
         for (String[] pelicula : cartelera) {
             fecha = pelicula[0]+"-"+pelicula[1]+"-"+pelicula[2];
             estreno[0] = fecha;
             estreno[1] = pelicula[3];
-            if (!estrenos.contains(estreno)) {
-                estreno[0] = fecha;
-                estreno[1] = pelicula[3];
-                estrenos.add(estreno);
-            }
+            //System.out.println("Estreno: "+estreno[0]+" "+estreno[1]);
+            estrenos.add(estreno);
+            estreno = new String[2];
         }
         return estrenos;
     }
@@ -67,8 +66,12 @@ public class Switch {
         String[] atencion = {fecha, pelicula};
         //System.out.println("vlanCaja: " + cliente[3]);
         boolean estreno = false;
-        for (String[] estrenoCaja : estrenos) {
-            if (estrenoCaja[0].equals(atencion[0]) && estrenoCaja[1].equals(atencion[1])) {
+        //printEstrenos();
+        for (int i = 0; i < estrenos.size(); i++) {
+            //System.out.println("numero de comparacion: "+i);
+            //System.out.println("Estreno: "+estrenos.get(i)[0]+" "+estrenos.get(i)[1]);
+            //System.out.println("Atencion: "+atencion[0]+" "+atencion[1]);
+            if (estrenos.get(i)[0].equals(fecha) && estrenos.get(i)[1].equals(pelicula)) {
                 estreno = true;
             }
         }
@@ -77,14 +80,12 @@ public class Switch {
             caja2.setCliente(cliente);
             Thread hiloCaja2 = new Thread(caja2); // Crea un nuevo hilo para cada cliente
             hiloCaja2.start();
-            hiloCaja2.join();
             detalle = caja2.getDetalle();
         } else {
             Caja caja1 = serviciosCaja.get(0); // Crea una nueva instancia de Caja para cada cliente
             caja1.setCliente(cliente);
             Thread hiloCaja1 = new Thread(caja1); // Crea un nuevo hilo para cada cliente
             hiloCaja1.start();
-            hiloCaja1.join();
             detalle = caja1.getDetalle();
         }
         return detalle;
@@ -95,6 +96,7 @@ public class Switch {
         String detalle = "";
         webSemaphore.acquire();
         Web web = getWebDisponible();
+        //System.out.println("web obtenido: "+web);
         while (web == null) {
             //System.out.println("No hay conexion web disponible");
             try {
@@ -109,13 +111,12 @@ public class Switch {
                 web.setCliente(cliente);
                 Thread hiloWeb = new Thread(web);
                 hiloWeb.start();
-                //hiloWeb.join();
                 detalle = web.getDetalle();
             }
             
         }finally{
-            regresarWeb(web);
             webSemaphore.release();
+            regresarWeb(web);
         }
     
         return detalle;
@@ -123,10 +124,9 @@ public class Switch {
 
     private Web getWebDisponible(){
         synchronized(serviciosWeb){
-            for(Web web : serviciosWeb){
-                if(!web.estaOcupado()){
-                    web.despertar();
-                    return web;
+            for (int i = 0; i < serviciosWeb.size(); i++) {
+                if (!serviciosWeb.get(i).estaOcupado()) {
+                    return serviciosWeb.remove(i);
                 }
             }
         }
@@ -140,5 +140,19 @@ public class Switch {
         }
     }
     
+    private void printHilos(){
+        for (int i = 0; i < hilosCaja.size(); i++) {
+            System.out.println("Hilo Caja "+hilosCaja.get(i).getState()+" "+serviciosCaja.get(i));
+        }
+        for (int i = 0; i < hilosWeb.size(); i++) {
+            System.out.println("Hilo Web "+hilosWeb.get(i).getState()+" "+serviciosWeb.get(i));
+        }
+    }
+
+    private void printEstrenos(){
+        for (String[] estreno : estrenos) {
+            System.out.println("Estreno: "+estreno[0]+" "+estreno[1]);
+        }
+    }
     
 }

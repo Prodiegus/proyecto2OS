@@ -12,7 +12,7 @@ public class Web implements Runnable {
         this.cartelera = cartelera;
         this.ocupado = false;
         this.id = id;
-        this.detalle = "Hilo Web "+id+" con error";
+        this.detalle = "Hilo Web "+id+" no iniciado";
         this.cliente = new String[6];
         this.limiteWeb = getLimiteWeb();
     }
@@ -31,6 +31,7 @@ public class Web implements Runnable {
 
     public synchronized void despertar() {
         ocupado = true;
+        notify();
     }
 
     public boolean estaOcupado() {
@@ -52,12 +53,6 @@ public class Web implements Runnable {
     @Override
     public void run() {
         System.out.println("hilo web " + id);
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-        //System.out.println("hilo web " + id);
         for (int i = 0; i < cartelera.size(); i++) {
             //System.out.println("web "+id+" "+cliente[3]+" == "+cartelera.get(i)[3]);
             if (cliente[3].trim().equals(cartelera.get(i)[3].trim())) {

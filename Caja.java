@@ -11,6 +11,8 @@ public class Caja implements Runnable {
         this.cartelera = cartelera;
         this.ocupado = false;
         this.id = id;
+        this.cliente = new String[6];
+        this.detalle = "Hilo Caja "+id+" no iniciado";
     }
 
     public boolean estaOcupado() {
@@ -35,12 +37,7 @@ public class Caja implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("hilo caja " + id);
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
+        System.out.println("hilo caja "+id);
         for(int i = 0; i < cartelera.size(); i++){
             if (cliente[3].equals(cartelera.get(i)[3])) {
                 if(Integer.parseInt(cartelera.get(i)[4]) > Integer.parseInt(cliente[4])){
@@ -51,6 +48,12 @@ public class Caja implements Runnable {
                 }
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Caja [cartelera=" + cartelera.size() + ", cliente=" + cliente[3] + ", detalle=" + detalle + ", id=" + id
+                + ", ocupado=" + ocupado + "]";
     }
 
 
