@@ -63,7 +63,6 @@ public class Switch {
         String detalle = null; // Inicializa como null
         String fecha = cliente[0] + "-" + cliente[1] + "-" + cliente[2];
         String pelicula = cliente[3];
-        String[] atencion = {fecha, pelicula};
         //System.out.println("vlanCaja: " + cliente[3]);
         boolean estreno = false;
         //printEstrenos();
@@ -140,21 +139,6 @@ public class Switch {
         synchronized(serviciosWeb){
             web.ponerADormir();
             serviciosWeb.add(web);   
-        }
-    }
-    
-    private void printHilos(){
-        for (int i = 0; i < hilosCaja.size(); i++) {
-            System.out.println("Hilo Caja "+hilosCaja.get(i).getState()+" "+serviciosCaja.get(i));
-        }
-        for (int i = 0; i < hilosWeb.size(); i++) {
-            System.out.println("Hilo Web "+hilosWeb.get(i).getState()+" "+serviciosWeb.get(i));
-        }
-    }
-
-    private void printEstrenos(){
-        for (String[] estreno : estrenos) {
-            System.out.println("Estreno: "+estreno[0]+" "+estreno[1]);
         }
     }
     

@@ -6,7 +6,6 @@ public class Web implements Runnable {
     private String[] cliente;
     private String detalle;
     private boolean ocupado;
-    private ArrayList<Integer> limiteWeb;
 
     public Web(ArrayList<String[]> cartelera, int id) {
         this.cartelera = cartelera;
@@ -14,15 +13,6 @@ public class Web implements Runnable {
         this.id = id;
         this.detalle = "Hilo Web "+id+" no iniciado";
         this.cliente = new String[6];
-        this.limiteWeb = getLimiteWeb();
-    }
-
-    private ArrayList<Integer> getLimiteWeb() {
-        ArrayList<Integer> limiteWeb = new ArrayList<>();
-        for (String[] pelicula : cartelera) {
-            limiteWeb.add((int)(Integer.parseInt(pelicula[4])*0.8));
-        }   
-        return limiteWeb;
     }
 
     public synchronized void ponerADormir() {

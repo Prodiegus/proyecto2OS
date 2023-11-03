@@ -1,0 +1,3 @@
+Hilo Caja 1 compra 5 tickets de Mad Max: Fury Road
+Hilo Caja 1 compra 4 tickets de Mad Max: Fury Road
+Hilo Web 1 compra 5 tickets de Creed: Corazón de campeón

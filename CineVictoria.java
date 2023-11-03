@@ -13,10 +13,13 @@ public class CineVictoria {
     }
 
     public void run(){
+        // primero debemos obtener los dias diferentes que hay en el flujo de clientes
         getDias();
+        // ahora debemos crear un gestor de salidas
         GestorSalidas gestorSalidas = new GestorSalidas(fechas);
         String detalle = "";
         String fecha = "";
+        // ahora debemos imprimir los datos de la simulacion
         System.out.println("Bienvenido a Cine Victoria");
         System.out.println("Peliculas en Cartelera: "+cartelera.size());
         System.out.println("Clientes en el flujo: "+clientes.size());
@@ -26,15 +29,19 @@ public class CineVictoria {
         for (String[] cliente : clientes) {
             fecha = cliente[0]+"-"+cliente[1]+"-"+cliente[2];
             if (cliente[5].equals("Web")) {
+                // debemos enviar el cliente al switch en la vlan de web
                 try {
                     detalle = switchCine.vlanWeb(cliente);
+                    // el detalle lo agregamos
                     gestorSalidas.addDetalle(fecha, detalle);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             } else if (cliente[5].equals("Caja")) {
+                // debemos enviar el cliente al switch en la vlan de caja
                 try {
                     detalle = switchCine.vlanCaja(cliente);
+                    // el detalle lo agregamos
                     gestorSalidas.addDetalle(fecha, detalle);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -74,13 +81,5 @@ public class CineVictoria {
         return contador;
     }
 
-    private void printCartelera(){
-        for (String[] pelicula : cartelera) {
-            System.out.println("Pelicula: "+pelicula[3]);
-            System.out.println("-\tEstreno: "+pelicula[0]+"-"+pelicula[1]+"-"+pelicula[2]);
-            System.out.println("-\tTickets disponibles: "+pelicula[4]);
-            System.out.println("");
-        }
-    }
     
 }

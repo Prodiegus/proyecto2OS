@@ -1,5 +1,12 @@
+/**
+ * Clase Main Cine Victoria
+ * @version 1.0, 03/11/2023
+ * @autor Tomas Valenzuela
+ * @autor Erik Soza
+ * @autor Diego Fernandez
+ */
+
 import java.io.File;
-import java.io.IOError;
 
 import GeneradorTXT.Generador;
 
@@ -21,13 +28,14 @@ public class Main {
                     // se ejecutara el flujo correspondiente
                     flujo = Integer.parseInt(args[i+1]);
                 } else if (args[i].equals("-help")) {
+                    // se mostrara la ayuda
                     System.out.println("Argumentos validos:");
                     System.out.println("-flujo <numero>");
                     System.out.println("-nf <numero_clientes> <numero_peliculas>");
                     System.out.println("-help");
                     System.exit(0);
                 } else if (args[i].equals("-nf")) {
-                    // se generara un nuevo flujo
+                    // se generara un Nuevo Flujo (-nf <numero_clientes> <numero_peliculas>)
                     clientes = Integer.parseInt(args[i+1]);
                     peliculas = Integer.parseInt(args[i+2]);
                     flujo = new Main().getNumeroArchivos();
@@ -35,6 +43,7 @@ public class Main {
                 } 
             }
         }else{
+            // el programa se cerrara y se mostrara la ayuda
             System.out.println("Argumentos no validos");
             System.out.println("Argumentos validos:");
             System.out.println("-flujo <numero>");
@@ -43,7 +52,7 @@ public class Main {
             System.exit(0);
         }
         // cargaremos el objeto encargado de orgenar los datos de los archivos
-        // haremos un multi catch ya que podemos experimentar errores con los hilos
+        // haremos un catch ya que podemos controlar errores con los hilos
         try{
             FileParser fileParser = new FileParser(flujo);
             CineVictoria cineVictoria = new CineVictoria(fileParser.getCartelera(), fileParser.getClientes());
